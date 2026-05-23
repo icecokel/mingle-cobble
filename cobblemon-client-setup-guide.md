@@ -64,9 +64,12 @@ Cobblemon Spawn Alerts
 Capture XP
 Cobblemon Battle Extras
 Mega Showdown
+Myths and Legends
+Cobblemon: Limited Legends
 Accessories
 Architectury API
 Embers Text API
+Fabric Language Kotlin
 oωo Library
 Tim Core
 ```
@@ -76,11 +79,14 @@ Tim Core
 ```text
 Cobblemon-fabric-1.7.3+1.21.1.jar
 fabric-api-0.116.12+1.21.1.jar
+fabric-language-kotlin-1.13.11+kotlin.2.3.21.jar
 cobbleloots-fabric-2.3.0.jar
 cobblemon_spawn_alerts-fabric-1.13.2.jar
 capturexp-fabric-1.7.3-1.3.0.jar
 cobblemon-battle-extras-fabric-1.13.45.jar
 mega_showdown-fabric-1.8.4+1.7.3+1.21.1.jar
+MythsAndLegends-fabric-1.9.0.jar
+LimitedLegends-fabric-1.9.0.jar
 accessories-fabric-1.1.0-beta.53+1.21.1.jar
 architectury-13.0.8-fabric.jar
 emberstextapi-fabric-1.21.1-3.0.0-alpha.2.jar
@@ -187,7 +193,19 @@ Minecraft를 실행한 뒤 서버를 등록합니다.
 
 키가 다르면 Minecraft 설정의 `조작` 메뉴에서 Cobblemon 관련 키를 검색해 확인합니다.
 
-## 11. 접속이 안 될 때
+## 11. 전설 포켓몬 콘텐츠
+
+서버에는 `Myths and Legends`와 `Cobblemon: Limited Legends`가 적용되어 있습니다.
+
+| 항목 | 내용 |
+| --- | --- |
+| 전설 소환 방식 | 특정 키 아이템과 바이옴/아이템 조건을 만족하면 전설/환상 포켓몬 스폰 조건이 열림 |
+| 소지 제한 | 플레이어 1인당 전설/환상 포켓몬 최대 1마리 |
+| 레시피 확인 | 현재 구성은 조합 레시피 중심이 아니라 키 아이템 조건 중심 |
+
+일반 플레이어는 `/give` 같은 관리자 명령을 사용할 수 없습니다. 관리자 테스트에서는 `mythsandlegends:tidal_bell`, `mythsandlegends:dr_fujis_diary`, `mythsandlegends:azure_flute` 같은 키 아이템 ID가 자동완성되는지 확인해 모드 로딩 상태를 볼 수 있습니다.
+
+## 12. 접속이 안 될 때
 
 먼저 아래를 확인합니다.
 
@@ -195,7 +213,7 @@ Minecraft를 실행한 뒤 서버를 등록합니다.
 Minecraft 버전이 1.21.1인가?
 Fabric 프로필인가?
 Cobblemon이 1.7.3인가?
-필수 모드 12개가 빠지지 않았는가?
+필수 모드 15개가 빠지지 않았는가?
 Cobblemon 1.8.x용 모드가 섞이지 않았는가?
 쉐이더나 그래픽 모드를 추가하지 않았는가?
 서버 주소를 관리자에게 받은 값 그대로 입력했는가?
