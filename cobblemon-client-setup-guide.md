@@ -1,0 +1,206 @@
+# Mingle Lounge 접속 가이드
+
+마지막 갱신: 2026-05-23
+
+이 문서는 새 유저가 `Mingle Lounge` Cobblemon 서버에 접속하기 위해 로컬 Minecraft 클라이언트를 세팅하는 가이드입니다.
+
+## 1. 서버 정보
+
+| 항목 | 값 |
+| --- | --- |
+| 서버 이름 | `Mingle Lounge` |
+| 서버 주소 | 관리자에게 받은 주소 사용 |
+| 서버 목록 설명 | `Mingle Lounge` |
+| Minecraft | `1.21.1` |
+| Loader | Fabric |
+| Cobblemon | `1.7.3` |
+| 권장 런처 | Modrinth App |
+| Java | Java 21 |
+
+서버 주소와 운영 페이지 주소는 공개 문서에 적지 않습니다. 필요한 경우 관리자에게 따로 받습니다.
+
+## 2. 먼저 설치할 것
+
+새 유저는 아래 두 가지가 필요합니다.
+
+```text
+Minecraft Java Edition
+Modrinth App
+```
+
+Modrinth App:
+
+```text
+https://modrinth.com/app
+```
+
+Modrinth App을 설치한 뒤 Microsoft 계정으로 Minecraft에 로그인합니다.
+
+## 3. 프로필 만들기
+
+Modrinth App에서 새 프로필을 만듭니다.
+
+1. Modrinth App 실행
+2. `Browse` 또는 `검색`에서 `Cobblemon Official Modpack` 검색
+3. `Cobblemon Official Modpack [Fabric]` 설치
+4. Minecraft 버전이 `1.21.1`인지 확인
+5. Loader가 Fabric인지 확인
+
+프로필 이름은 알아보기 쉽게 아래처럼 두는 것을 권장합니다.
+
+```text
+Mingle Lounge Cobblemon
+```
+
+## 4. 필수 모드 확인
+
+서버 접속에는 아래 모드 구성이 필요합니다. Modrinth App의 프로필 화면에서 `Content` 또는 `Mods` 목록을 열어 확인합니다.
+
+```text
+Cobblemon 1.7.3
+Fabric API
+Cobbleloots
+Cobblemon Spawn Alerts
+Capture XP
+Cobblemon Battle Extras
+Mega Showdown
+Accessories
+Architectury API
+Embers Text API
+oωo Library
+Tim Core
+```
+
+파일명 기준으로는 아래 버전과 맞아야 합니다.
+
+```text
+Cobblemon-fabric-1.7.3+1.21.1.jar
+fabric-api-0.116.12+1.21.1.jar
+cobbleloots-fabric-2.3.0.jar
+cobblemon_spawn_alerts-fabric-1.13.2.jar
+capturexp-fabric-1.7.3-1.3.0.jar
+cobblemon-battle-extras-fabric-1.13.45.jar
+mega_showdown-fabric-1.8.4+1.7.3+1.21.1.jar
+accessories-fabric-1.1.0-beta.53+1.21.1.jar
+architectury-13.0.8-fabric.jar
+emberstextapi-fabric-1.21.1-3.0.0-alpha.2.jar
+owo-lib-0.13.0-alpha.15+1.21.jar
+timcore-fabric-1.7.3-1.31.0.jar
+```
+
+위 목록 중 일부가 없으면 Modrinth App의 프로필에서 `Add content`를 눌러 같은 이름의 모드를 추가합니다.
+
+## 5. 설치하지 말 것
+
+현재 서버는 안정성을 우선합니다. 아래 모드는 새 유저 세팅에 넣지 않습니다.
+
+```text
+CobblemonRider
+Iris
+Sodium
+쉐이더팩
+particular
+timcore 1.8.x 계열
+Cobblemon 1.8.x 계열
+```
+
+쉐이더는 접속에 필요하지 않고 성능 문제가 생길 수 있으므로 기본 세팅에서는 제외합니다.
+
+## 6. 선택 모드
+
+지도 편의 모드는 선택입니다. 없어도 서버 접속은 됩니다.
+
+권장 선택 모드:
+
+```text
+Xaero's Minimap
+Xaero's World Map
+```
+
+설치할 경우 Minecraft `1.21.1`, Fabric용 파일을 사용합니다.
+
+## 7. 실행 설정
+
+Modrinth App 프로필 설정에서 아래를 확인합니다.
+
+| 항목 | 권장 값 |
+| --- | --- |
+| Minecraft | `1.21.1` |
+| Loader | Fabric |
+| Java | Java 21 |
+| 메모리 | 최소 4GB, 권장 6GB 이상 |
+
+Modrinth App 내장 Java를 쓰면 보통 Java 21이 자동으로 잡힙니다.
+
+## 8. 서버 등록
+
+Minecraft를 실행한 뒤 서버를 등록합니다.
+
+1. `멀티플레이` 선택
+2. `서버 추가` 선택
+3. 아래 값 입력
+
+```text
+서버 이름: Mingle Lounge
+서버 주소: 관리자에게 받은 주소
+```
+
+4. 저장
+5. 서버 목록에서 `Mingle Lounge` 선택 후 접속
+
+서버 목록에서 서버 아래 설명 문구는 서버 설정의 `motd=Mingle Lounge` 기준으로 표시됩니다. Minecraft가 창 제목이나 화면 일부에 표시하는 `제삼자 서버` 문구는 클라이언트 분류명이라 서버 설정으로 바꾸지 못합니다.
+
+## 9. 처음 접속하면
+
+처음 접속하면 스타터 보상을 받을 수 있습니다.
+
+```text
+몬스터볼 20개
+슈퍼볼 5개
+스테이크 30개
+포켓몬 도감 1개
+```
+
+서버는 기본 Minecraft 적대 몬스터가 나오지 않게 설정되어 있습니다. 좀비, 해골 걱정보다는 포켓몬 탐험과 포획에 집중하면 됩니다.
+
+스폰 지점은 포켓몬센터가 있는 마을 근처입니다.
+
+## 10. 기본 조작
+
+| 행동 | 키 |
+| --- | --- |
+| 인벤토리 | `E` |
+| 채팅 | `T` |
+| 포켓몬 꺼내기/넣기 | `R` |
+| 포켓몬 메뉴 | `M` |
+| 파티 선택 | `Up` / `Down` |
+| 파티 UI 숨김 | `O` |
+| 전투 로그 | `B` |
+| 라이딩 자유 시점 | `Left Alt` |
+
+키가 다르면 Minecraft 설정의 `조작` 메뉴에서 Cobblemon 관련 키를 검색해 확인합니다.
+
+## 11. 접속이 안 될 때
+
+먼저 아래를 확인합니다.
+
+```text
+Minecraft 버전이 1.21.1인가?
+Fabric 프로필인가?
+Cobblemon이 1.7.3인가?
+필수 모드 12개가 빠지지 않았는가?
+Cobblemon 1.8.x용 모드가 섞이지 않았는가?
+쉐이더나 그래픽 모드를 추가하지 않았는가?
+서버 주소를 관리자에게 받은 값 그대로 입력했는가?
+```
+
+자주 나는 문제:
+
+| 증상 | 확인할 것 |
+| --- | --- |
+| `Incompatible mod set` | 모드 버전 불일치, 특히 `timcore`와 `Cobblemon` 버전 확인 |
+| 접속 직후 튕김 | 서버 필수 모드 누락 여부 확인 |
+| 화면이 너무 무거움 | 쉐이더, Iris, Sodium 제거 |
+| 서버가 안 보임 | 서버 주소와 서버 상태 확인 |
+
+문제가 계속되면 에러 화면의 문구와 `latest.log`를 관리자에게 전달합니다.
