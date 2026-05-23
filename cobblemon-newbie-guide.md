@@ -2,7 +2,7 @@
 
 마지막 갱신: 2026-05-23
 
-이 문서는 서버에 처음 들어온 사람이 Cobblemon을 어떻게 시작하면 되는지 빠르게 파악하기 위한 플레이 가이드입니다. 설치 방법은 [접속 가이드](/Users/smlee/mingle-lounge/cobblemon-client-setup-guide.md)를 봅니다.
+이 문서는 서버에 처음 들어온 사람이 Cobblemon을 어떻게 시작하면 되는지 빠르게 파악하기 위한 플레이 가이드입니다. 설치 방법은 [접속 가이드](/Users/smlee/mingle-lounge/cobblemon-client-setup-guide.md)를 보고, 지도/편의 모드와 자세한 단축키는 [모드 사용 가이드](/Users/smlee/mingle-lounge/cobblemon-mod-usage-guide.md)를 봅니다.
 
 ## 1. 처음 접속하면 할 일
 
@@ -18,7 +18,7 @@
 
 ## 2. 기본 조작
 
-현재 로컬 프로필 기준 키입니다. 개인 설정에 따라 다를 수 있으니 안 맞으면 Minecraft의 `Options` -> `Controls`에서 확인합니다.
+현재 로컬 프로필 기준 핵심 키입니다. 지도 모드와 편의 기능까지 포함한 자세한 설명은 [모드 사용 가이드](/Users/smlee/mingle-lounge/cobblemon-mod-usage-guide.md)를 봅니다. 개인 설정에 따라 다를 수 있으니 안 맞으면 Minecraft의 `Options` -> `Controls`에서 확인합니다.
 
 | 행동 | 키 |
 | --- | --- |
@@ -26,7 +26,7 @@
 | 포켓몬 요약/메뉴 열기 | `M` |
 | 파티 포켓몬 선택 위/아래 이동 | `Up` / `Down` |
 | 파티 UI 숨기기 | `O` |
-| 전투 로그 보기 | `B` |
+| 전투 로그 보기 | `'` |
 | 라이딩 자유 시점 | `Left Alt` |
 | 인벤토리 | `E` |
 | 채팅 | `T` |
@@ -66,7 +66,7 @@
 
 1. 마을과 포켓몬센터 주변을 탐색합니다.
 2. 필드 보상볼을 줍습니다.
-3. Apricorn 나무를 찾아 Apricorn을 모읍니다.
+3. 규토리(Apricorn) 나무를 찾아 규토리를 모읍니다.
 4. 구리/철/금 같은 기본 광물을 모아 볼 제작을 준비합니다.
 
 Cobblemon 기본 제작은 버전과 서버 설정에 따라 체감이 다를 수 있습니다. 제작법이 헷갈리면 게임 내 레시피 검색 모드가 있는 프로필에서는 레시피 검색을 먼저 확인합니다.
@@ -74,16 +74,16 @@ Cobblemon 기본 제작은 버전과 서버 설정에 따라 체감이 다를 �
 기본 볼 제작 예시:
 
 ```text
-몬스터볼 4개 = 빨간 Apricorn 4개 + 구리 주괴 1개
-슈퍼볼 4개 = 파란 Apricorn 2개 + 빨간 Apricorn 2개 + 철 주괴 1개
-하이퍼볼 4개 = 검은 Apricorn 2개 + 노란 Apricorn 2개 + 금 주괴 1개
+몬스터볼 4개 = 빨간 규토리 4개 + 구리 주괴 1개
+슈퍼볼 4개 = 파란 규토리 2개 + 빨간 규토리 2개 + 철 주괴 1개
+하이퍼볼 4개 = 검은 규토리 2개 + 노란 규토리 2개 + 금 주괴 1개
 ```
 
-제작대 기준으로 가운데에 주괴를 두고, 위/왼쪽/오른쪽/아래 네 칸에 Apricorn을 배치합니다. 예를 들어 몬스터볼은 가운데 구리 주괴, 주변 네 칸에 빨간 Apricorn을 놓으면 됩니다.
+제작대 기준으로 가운데에 주괴를 두고, 위/왼쪽/오른쪽/아래 네 칸에 규토리를 배치합니다. 예를 들어 몬스터볼은 가운데 구리 주괴, 주변 네 칸에 빨간 규토리를 놓으면 됩니다.
 
 ## 6. 회복과 PC
 
-전투 후 포켓몬 체력이 낮으면 포켓몬센터의 Healing Machine을 사용합니다. 포켓몬센터가 가까우면 초반에는 회복템을 아끼고 센터를 자주 이용하는 편이 좋습니다.
+전투 후 포켓몬 체력이 낮으면 포켓몬센터의 회복 장치(Healing Machine)를 사용합니다. 포켓몬센터가 가까우면 초반에는 회복템을 아끼고 센터를 자주 이용하는 편이 좋습니다.
 
 포켓몬이 6마리를 넘으면 추가로 잡은 포켓몬은 PC에 보관됩니다. 파티를 바꾸고 싶으면 PC를 사용합니다.
 
@@ -155,6 +155,7 @@ Azure Flute
 
 플레이 방법이 막히면 아래 자료가 도움이 됩니다.
 
+- [모드 사용 가이드](/Users/smlee/mingle-lounge/cobblemon-mod-usage-guide.md): 지도, 편의 모드, Cobblemon 단축키
 - [CobbleDex Getting Started](https://cobble-hub.com/getting-started.html): 뉴비용 전체 흐름
 - [공식 Cobblemon Wiki 설치 가이드](https://wiki.cobblemon.com/index.php/Guides/Installation): 설치 기준 확인
 - [Minecraft Guides Wiki - Cobblemon](https://www.minecraft-guides.com/mod/cobblemon/): 조작, 포획, 제작, 진화 등 항목별 설명
