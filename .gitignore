@@ -4,9 +4,3 @@
 !.gitattributes
 !cobblemon-client-setup-guide.md
 !cobblemon-newbie-guide.md
-!cobblemon-mod-usage-guide.md
-!client-mods/
-!client-mods/required/
-!client-mods/required/*.jar
-!client-mods/optional/
-!client-mods/optional/*.jar

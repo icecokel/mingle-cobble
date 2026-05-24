@@ -59,15 +59,16 @@ Mingle Lounge Cobblemon
 이 저장소에는 클라이언트용 모드 파일을 아래처럼 나눠 두었습니다.
 
 ```text
-client-mods/required  필수 모드 15개
+client-mods/required  필수 모드 17개
 client-mods/optional  선택 모드 3개
 ```
 
-처음 세팅할 때는 `client-mods/required` 안의 `.jar` 파일 15개를 Modrinth 프로필의 `mods` 폴더에 모두 넣습니다. 선택 모드는 접속 성공을 확인한 뒤 필요할 때 추가합니다.
+처음 세팅할 때는 `client-mods/required` 안의 `.jar` 파일 17개를 Modrinth 프로필의 `mods` 폴더에 모두 넣습니다. 선택 모드는 접속 성공을 확인한 뒤 필요할 때 추가합니다.
 
 ```text
 Cobblemon 1.7.3
 Fabric API
+Cloth Config API
 Cobbleloots
 Cobblemon Spawn Alerts
 Capture XP
@@ -75,6 +76,7 @@ Cobblemon Battle Extras
 Mega Showdown
 Myths and Legends
 Cobblemon: Limited Legends
+Inmis
 Accessories
 Architectury API
 Embers Text API
@@ -92,12 +94,14 @@ MythsAndLegends-fabric-1.9.0.jar
 accessories-fabric-1.1.0-beta.53+1.21.1.jar
 architectury-13.0.8-fabric.jar
 capturexp-fabric-1.7.3-1.3.0.jar
+cloth-config-15.0.140-fabric.jar
 cobbleloots-fabric-2.3.0.jar
 cobblemon-battle-extras-fabric-1.13.45.jar
 cobblemon_spawn_alerts-fabric-1.13.2.jar
 emberstextapi-fabric-1.21.1-3.0.0-alpha.2.jar
 fabric-api-0.116.12+1.21.1.jar
 fabric-language-kotlin-1.13.11+kotlin.2.3.21.jar
+inmis-2.8.2-1.21.1.jar
 mega_showdown-fabric-1.8.4+1.7.3+1.21.1.jar
 owo-lib-0.13.0-alpha.15+1.21.jar
 timcore-fabric-1.7.3-1.31.0.jar
@@ -148,9 +152,9 @@ xaerominimap-fabric-1.21.1-25.3.12.jar
 xaeroworldmap-fabric-1.21.1-1.40.16.jar
 ```
 
-설치할 경우 Minecraft `1.21.1`, Fabric용 파일을 사용합니다. 현재 로컬 테스트 프로필은 필수 모드 15개와 선택 모드 3개를 합쳐 총 18개 모드로 맞춰 두었습니다.
+설치할 경우 Minecraft `1.21.1`, Fabric용 파일을 사용합니다. 현재 로컬 테스트 프로필은 필수 모드 17개와 선택 모드 3개를 합쳐 총 20개 모드로 맞춰 두었습니다.
 
-선택 모드는 서버에 설치하지 않는 클라이언트 편의 모드입니다. 접속 문제가 생기면 먼저 `client-mods/optional`에서 복사한 3개를 제거하고 필수 모드 15개만으로 다시 테스트합니다.
+선택 모드는 서버에 설치하지 않는 클라이언트 편의 모드입니다. 접속 문제가 생기면 먼저 `client-mods/optional`에서 복사한 3개를 제거하고 필수 모드 17개만으로 다시 테스트합니다.
 
 ### Wiki Cobblemon 사용법
 
@@ -229,6 +233,7 @@ Minecraft를 실행한 뒤 서버를 등록합니다.
 | 행동 | 키 |
 | --- | --- |
 | 인벤토리 | `E` |
+| 첫 번째 백팩 열기 | `I` |
 | 채팅 | `T` |
 | 포켓몬 꺼내기/넣기 | `R` |
 | 포켓몬 메뉴 | `M` |
@@ -239,7 +244,26 @@ Minecraft를 실행한 뒤 서버를 등록합니다.
 
 키가 다르면 Minecraft 설정의 `조작` 메뉴에서 Cobblemon 관련 키를 검색해 확인합니다.
 
-## 11. 전설 포켓몬 콘텐츠
+## 11. 백팩
+
+서버에는 인벤토리 확장용 `Inmis`가 적용되어 있습니다. 백팩 아이템을 들고 우클릭하면 열 수 있고, 인벤토리에 백팩이 있을 때 `I` 키로 첫 번째 백팩을 열 수 있습니다.
+
+기본 제작 흐름:
+
+```text
+Baby Backpack = 가죽 4개 + 상자 1개
+Frayed Backpack = 가죽 8개 + 상자 1개
+Plated Backpack = Frayed Backpack + 철 주괴 8개
+Gilded Backpack = Plated Backpack + 금 주괴 8개
+Bejeweled Backpack = Gilded Backpack + 다이아몬드/에메랄드
+Ender Pouch = 가죽 8개 + 엔더 상자 1개
+```
+
+`Inmis`의 기본 키는 `B`지만, 현재 로컬 테스트 프로필은 핫바 7번 키와 겹치지 않게 `I`로 바꿔 두었습니다. 키가 다르면 Minecraft `Options` -> `Controls`에서 `Inmis` 항목을 검색해 바꿉니다.
+
+백팩 안에 아이템을 넣은 상태로 모드를 제거하면 아이템 접근이 어려워질 수 있습니다. 서버에서 백팩 모드를 제거해야 하는 상황이 생기면 먼저 백팩 안의 아이템을 모두 꺼낸 뒤 진행합니다.
+
+## 12. 전설 포켓몬 콘텐츠
 
 서버에는 `Myths and Legends`와 `Cobblemon: Limited Legends`가 적용되어 있습니다.
 
@@ -251,7 +275,7 @@ Minecraft를 실행한 뒤 서버를 등록합니다.
 
 일반 플레이어는 `/give` 같은 관리자 명령을 사용할 수 없습니다. 관리자 테스트에서는 `mythsandlegends:tidal_bell`, `mythsandlegends:dr_fujis_diary`, `mythsandlegends:azure_flute` 같은 키 아이템 ID가 자동완성되는지 확인해 모드 로딩 상태를 볼 수 있습니다.
 
-## 12. 접속이 안 될 때
+## 13. 접속이 안 될 때
 
 먼저 아래를 확인합니다.
 
@@ -259,7 +283,7 @@ Minecraft를 실행한 뒤 서버를 등록합니다.
 Minecraft 버전이 1.21.1인가?
 Fabric 프로필인가?
 Cobblemon이 1.7.3인가?
-필수 모드 15개가 빠지지 않았는가?
+필수 모드 17개가 빠지지 않았는가?
 선택 모드 3개를 추가했다면 먼저 제거하고 다시 테스트했는가?
 Cobblemon 1.8.x용 모드가 섞이지 않았는가?
 쉐이더나 그래픽 모드를 추가하지 않았는가?
