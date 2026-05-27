@@ -59,11 +59,11 @@ Modrinth App에서 새 프로필을 만듭니다.
 이 저장소에는 클라이언트용 모드 파일을 아래처럼 나눠 두었습니다.
 
 ```text
-client-mods/required  필수 모드 17개
+client-mods/required  필수 모드 18개
 client-mods/optional  선택 모드 2개
 ```
 
-처음 세팅할 때는 `client-mods/required` 안의 `.jar` 파일 17개를 Modrinth 프로필의 `mods` 폴더에 모두 넣습니다. 선택 모드는 접속 성공을 확인한 뒤 필요할 때 추가합니다.
+처음 세팅할 때는 `client-mods/required` 안의 `.jar` 파일 18개를 Modrinth 프로필의 `mods` 폴더에 모두 넣습니다. 선택 모드는 접속 성공을 확인한 뒤 필요할 때 추가합니다.
 
 ```text
 Cobblemon 1.7.3
@@ -73,6 +73,7 @@ Cobbleloots
 Cobblemon Spawn Alerts
 Capture XP
 Cobblemon Battle Extras
+Cobblemon Pokemon Badges
 Mega Showdown
 Myths and Legends
 Cobblemon: Limited Legends
@@ -97,6 +98,7 @@ capturexp-fabric-1.7.3-1.3.0.jar
 cloth-config-15.0.140-fabric.jar
 cobbleloots-fabric-2.3.0.jar
 cobblemon-battle-extras-fabric-1.13.45.jar
+cobblemonpokemonbadges-fabric-0.1.1.jar
 cobblemon_spawn_alerts-fabric-1.13.2.jar
 emberstextapi-fabric-1.21.1-3.0.0-alpha.2.jar
 fabric-api-0.116.12+1.21.1.jar
@@ -150,9 +152,9 @@ xaerominimap-fabric-1.21.1-25.3.12.jar
 xaeroworldmap-fabric-1.21.1-1.40.16.jar
 ```
 
-설치할 경우 Minecraft `1.21.1`, Fabric용 파일을 사용합니다. 현재 로컬 테스트 프로필은 필수 모드 17개와 선택 모드 2개를 합쳐 총 19개 모드로 맞춰 두었습니다.
+설치할 경우 Minecraft `1.21.1`, Fabric용 파일을 사용합니다. 현재 로컬 테스트 프로필은 필수 모드 18개와 선택 모드 2개를 합쳐 총 20개 모드로 맞춰 둡니다.
 
-선택 모드는 서버에 설치하지 않는 클라이언트 편의 모드입니다. 접속 문제가 생기면 먼저 `client-mods/optional`에서 복사한 2개를 제거하고 필수 모드 17개만으로 다시 테스트합니다.
+선택 모드는 서버에 설치하지 않는 클라이언트 편의 모드입니다. 접속 문제가 생기면 먼저 `client-mods/optional`에서 복사한 2개를 제거하고 필수 모드 18개만으로 다시 테스트합니다.
 
 `Wiki Cobblemon`은 한글 검색과 검색 버튼 동작이 불안정해서 현재 로컬 테스트 프로필과 기본 안내에서 제외했습니다. 포켓몬 정보 검색은 웹 위키를 사용합니다.
 
@@ -258,7 +260,7 @@ Ender Pouch = 가죽 8개 + 엔더 상자 1개
 Minecraft 버전이 1.21.1인가?
 Fabric 프로필인가?
 Cobblemon이 1.7.3인가?
-필수 모드 17개가 빠지지 않았는가?
+필수 모드 18개가 빠지지 않았는가?
 선택 모드 2개를 추가했다면 먼저 제거하고 다시 테스트했는가?
 Cobblemon 1.8.x용 모드가 섞이지 않았는가?
 쉐이더나 그래픽 모드를 추가하지 않았는가?

@@ -12,7 +12,7 @@
 
 현재 기준선은 Minecraft `1.21.1`, Fabric Loader `0.19.2`, Java 21, Cobblemon `1.7.3`입니다. 이 기준을 벗어나는 모드는 설치하지 않습니다.
 
-서버 접속에 필요한 모드는 17개만 유지합니다. 역할이 겹치거나 충돌 이력이 있는 모드는 넣지 않습니다.
+서버 접속에 필요한 모드는 18개만 유지합니다. 역할이 겹치거나 충돌 이력이 있는 모드는 넣지 않습니다.
 
 ## 2. 새 서버 생성
 
@@ -48,6 +48,7 @@
 | 알림 | `cobblemon_spawn_alerts-fabric-1.13.2.jar` |
 | 포획 경험치 | `capturexp-fabric-1.7.3-1.3.0.jar` |
 | 전투 보조 | `cobblemon-battle-extras-fabric-1.13.45.jar` |
+| 관장 배지 | `cobblemonpokemonbadges-fabric-0.1.1.jar` |
 | 메가진화 | `mega_showdown-fabric-1.8.4+1.7.3+1.21.1.jar` |
 | 전설 소환 | `MythsAndLegends-fabric-1.9.0.jar` |
 | 전설 소지 제한 | `LimitedLegends-fabric-1.9.0.jar` |
@@ -75,7 +76,7 @@
 
 ## 5. 데이터팩 설치
 
-스타터 보상, 6시간 접속 보상, 도감 보상, 시간 설정, 전설 소환 데이터팩을 새 서버 월드에 설치합니다.
+스타터 보상, 6시간 접속 보상, 도감 보상, 관장 NPC, 시간 설정, 전설 소환 데이터팩을 새 서버 월드에 설치합니다.
 
 워크스페이스에 준비된 데이터팩 원본:
 
@@ -86,6 +87,7 @@
 /Users/smlee/mingle-lounge/datapacks/mingle-login-reward.zip
 /Users/smlee/mingle-lounge/datapacks/mingle-dex-rewards
 /Users/smlee/mingle-lounge/datapacks/mingle-dex-rewards.zip
+/Users/smlee/mingle-lounge/datapacks/cobblemon-indigo.zip
 /Users/smlee/mingle-lounge/datapacks/mingle-time-settings
 /Users/smlee/mingle-lounge/datapacks/mingle-time-settings.zip
 ```
@@ -96,6 +98,7 @@
 world/datapacks/mingle-starter-balls
 world/datapacks/mingle-login-reward.zip
 world/datapacks/mingle-dex-rewards.zip
+world/datapacks/cobblemon-indigo.zip
 world/datapacks/mingle-time-settings.zip
 world/datapacks/MythsAndLegends-Datapack-v1.0.5.zip
 ```
@@ -111,8 +114,11 @@ world/datapacks/mingle-starter-balls/data/mingle_starter/function/tick.mcfunctio
 world/datapacks/mingle-starter-balls/data/mingle_starter/function/grant.mcfunction
 world/datapacks/mingle-login-reward.zip
 world/datapacks/mingle-dex-rewards.zip
+world/datapacks/cobblemon-indigo.zip
 world/datapacks/mingle-time-settings.zip
 ```
+
+`cobblemon-indigo.zip`은 Cobblemon NPC 데이터팩입니다. 관동 8관장, 사천왕, 챔피언 프리셋과 배지 지급 흐름을 추가합니다. 배지 아이템 지급을 위해 서버와 클라이언트 모두 `cobblemonpokemonbadges-fabric-0.1.1.jar`가 필요합니다. 관장 NPC는 자동 배치되지 않으므로 OP 권한으로 `/spawnnpc cobblemon:indigo_leader_brock` 같은 명령을 사용해 직접 배치합니다.
 
 `mingle-time-settings.zip`은 데이터팩 로드 시 아래 gamerule을 적용합니다. 이는 Cobblemon 기본 흐름에 맞춰 밤/날씨 순환을 켜는 설정이며, `doMobSpawning`은 바닐라 적대 몹 억제 목적과 별개라 건드리지 않습니다.
 

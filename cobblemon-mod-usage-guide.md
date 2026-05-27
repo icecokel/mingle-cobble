@@ -80,6 +80,7 @@ apricorn
 | `Cobblemon Spawn Alerts` | 희귀하거나 중요한 포켓몬 스폰 알림을 표시 |
 | `Capture XP` | 포켓몬을 잡을 때도 경험치를 얻음 |
 | `Cobblemon Battle Extras` | 전투 로그 같은 전투 보조 기능 |
+| `Cobblemon Pokemon Badges` | 관장을 이겼을 때 받는 관동 배지 아이템을 추가 |
 | `Mega Showdown` | 메가진화 관련 콘텐츠 |
 | `Myths and Legends` | 특정 키 아이템과 조건 기반 전설/환상 포켓몬 콘텐츠 |
 | `Limited Legends` | 플레이어별 전설/환상 포켓몬 소지 제한 |
