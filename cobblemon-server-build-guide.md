@@ -1,6 +1,6 @@
 # Mingle Lounge Cobblemon 서버 구축 가이드
 
-마지막 갱신: 2026-05-23
+마지막 갱신: 2026-05-28
 
 이 문서는 새 `mingle-lounge` Cobblemon 서버를 처음부터 구축할 때 사용하는 작업 가이드입니다. 목표는 에이전트가 이 문서만 보고 새 Fabric 서버를 현재 안정화 기준과 같은 상태로 만들 수 있게 하는 것입니다.
 
@@ -75,13 +75,15 @@
 
 ## 5. 데이터팩 설치
 
-스타터 보상, 도감 보상, 시간 설정, 전설 소환 데이터팩을 새 서버 월드에 설치합니다.
+스타터 보상, 6시간 접속 보상, 도감 보상, 시간 설정, 전설 소환 데이터팩을 새 서버 월드에 설치합니다.
 
 워크스페이스에 준비된 데이터팩 원본:
 
 ```text
 /Users/smlee/mingle-lounge/datapacks/mingle-starter-balls
 /Users/smlee/mingle-lounge/datapacks/mingle-starter-balls.zip
+/Users/smlee/mingle-lounge/datapacks/mingle-login-reward
+/Users/smlee/mingle-lounge/datapacks/mingle-login-reward.zip
 /Users/smlee/mingle-lounge/datapacks/mingle-dex-rewards
 /Users/smlee/mingle-lounge/datapacks/mingle-dex-rewards.zip
 /Users/smlee/mingle-lounge/datapacks/mingle-time-settings
@@ -92,6 +94,7 @@
 
 ```text
 world/datapacks/mingle-starter-balls
+world/datapacks/mingle-login-reward.zip
 world/datapacks/mingle-dex-rewards.zip
 world/datapacks/mingle-time-settings.zip
 world/datapacks/MythsAndLegends-Datapack-v1.0.5.zip
@@ -106,6 +109,7 @@ world/datapacks/mingle-starter-balls/data/minecraft/tags/function/tick.json
 world/datapacks/mingle-starter-balls/data/mingle_starter/function/load.mcfunction
 world/datapacks/mingle-starter-balls/data/mingle_starter/function/tick.mcfunction
 world/datapacks/mingle-starter-balls/data/mingle_starter/function/grant.mcfunction
+world/datapacks/mingle-login-reward.zip
 world/datapacks/mingle-dex-rewards.zip
 world/datapacks/mingle-time-settings.zip
 ```
@@ -151,6 +155,8 @@ scoreboard players set @a[scores={ml_starter_backpack=1}] ml_starter_backpack 2
 ```
 
 이 데이터팩은 scoreboard `ml_starter_balls`, `ml_starter_pokedex`, `ml_starter_backpack`으로 플레이어별 지급 여부를 기록합니다. 새 서버에 처음 접속하거나 아직 지급 기록이 없는 플레이어는 몬스터볼 20개, 슈퍼볼 5개, 스테이크 30개, 포켓몬 도감 1개, Baby Backpack 1개를 1회 받습니다. 이미 기존 스타터 보상을 받은 플레이어도 도감이나 백팩 지급 기록이 없으면 다음 접속 시 해당 보상을 1회 받습니다. 도감/백팩 지급 성공 후 각 값은 `2`로 고정됩니다.
+
+`mingle-login-reward`는 마지막 보상 수령 후 서버 가동시간 기준 6시간이 지난 플레이어에게 접속 보상을 지급합니다. 데이터팩은 scoreboard `ml_login_clock`, `ml_login_seen`, `ml_login_last`, `ml_login_elapsed`로 서버 가동시간과 플레이어별 마지막 보상 수령 시각을 기록합니다. 서버가 꺼져 있던 시간은 데이터팩만으로 계산하지 못하므로 카운트에 포함되지 않습니다. 보상은 몬스터볼 5개 확정 지급이며, 추가 보상은 40% 추가 없음, 25% 슈퍼볼 3개, 15% 경험치 사탕 XS 2개, 10% 경험치 사탕 XS 5개, 5% 부활초 1개, 3% 하이퍼볼 1개, 2% 기력의 조각 1개입니다.
 
 `mingle-dex-rewards`는 hidden advancement로 일반 포켓몬 920종, 전설/환상/울트라비스트 105종을 분리 추적합니다. 서버 데이터팩 적용 이후 새로 잡거나 진화로 등록한 고유 종 기준으로 일반 도감 10/30/50/100/250/500/750종 보상과 전설/환상 첫 등록 보상을 지급합니다. 기존 도감 기록은 자동 소급하지 않습니다.
 
@@ -252,6 +258,7 @@ datapack list
 스타터 보상: 몬스터볼 20개 + 슈퍼볼 5개 + 스테이크 30개
 스타터 도감 보상: 포켓몬 도감 1개
 스타터 백팩 보상: Baby Backpack 1개
+6시간 접속 보상: 몬스터볼 5개와 랜덤 추가 보상을 확인하세요.
 ```
 
 8. 지급 점수를 확인합니다.
@@ -260,6 +267,8 @@ datapack list
 scoreboard players get <플레이어명> ml_starter_balls
 scoreboard players get <플레이어명> ml_starter_pokedex
 scoreboard players get <플레이어명> ml_starter_backpack
+scoreboard players get <플레이어명> ml_login_last
+scoreboard players get <플레이어명> ml_login_elapsed
 ```
 
 9. Myths and Legends 아이템 ID가 등록됐는지 OP 계정이나 콘솔 권한으로 확인합니다.
