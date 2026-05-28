@@ -120,6 +120,15 @@ world/datapacks/mingle-time-settings.zip
 
 `cobblemon-indigo.zip`은 Cobblemon NPC 데이터팩입니다. 관동 8관장, 사천왕, 챔피언 프리셋과 배지 지급 흐름을 추가합니다. 배지 아이템 지급을 위해 서버와 클라이언트 모두 `cobblemonpokemonbadges-fabric-0.1.1.jar`가 필요합니다. 관장 NPC는 자동 배치되지 않으므로 OP 권한으로 `/spawnnpc cobblemon:indigo_leader_brock` 같은 명령을 사용해 직접 배치합니다.
 
+운영 서버에 Indigo를 반영할 때 업로드할 파일과 기준 해시는 아래와 같습니다.
+
+| 서버 경로 | 로컬 파일 | SHA-256 |
+| --- | --- | --- |
+| `mods/cobblemonpokemonbadges-fabric-0.1.1.jar` | `work/indigo-20260528/server-upload/mods/cobblemonpokemonbadges-fabric-0.1.1.jar` | `a5011078a804bdff0d299fe2e0e33010c92c976408524d9b0df041030d73f941` |
+| `world/datapacks/cobblemon-indigo.zip` | `work/indigo-20260528/server-upload/world/datapacks/cobblemon-indigo.zip` | `8aff092a0009b0a3de79c0652f5a26a067ad8b7941e721b8a5257b1bc1643303` |
+
+2026-05-28 운영 서버에는 위 두 파일을 File Browser로 업로드했고, 서버에서 다시 읽은 파일의 SHA-256이 기준 해시와 일치함을 확인했습니다. 모드 jar 추가는 서버 재시작 전에는 반영되지 않으므로, 업로드 검증 뒤 사용자가 서버 관리 버튼으로 재시작해야 합니다.
+
 `mingle-time-settings.zip`은 데이터팩 로드 시 아래 gamerule을 적용합니다. 이는 Cobblemon 기본 흐름에 맞춰 밤/날씨 순환을 켜는 설정이며, `doMobSpawning`은 바닐라 적대 몹 억제 목적과 별개라 건드리지 않습니다.
 
 ```mcfunction
