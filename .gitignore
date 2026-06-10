@@ -2,7 +2,11 @@
 
 !.gitignore
 !.gitattributes
-!client-mods/
-!client-mods/**
-!cobblemon-client-setup-guide.md
-!cobblemon-newbie-guide.md
+!README.md
+!AGENTS.md
+!*.md
+!*.command
+!docs/
+!docs/**
+!tools/
+!tools/**

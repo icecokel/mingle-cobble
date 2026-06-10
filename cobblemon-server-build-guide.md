@@ -1,10 +1,12 @@
 # Mingle Lounge Cobblemon 서버 구축 가이드
 
-마지막 갱신: 2026-05-28
+마지막 갱신: 2026-06-03
+
+> 현재 `icecoke-cobblemon` 서버를 새로 재현하기 위한 최신 구축 절차가 아닙니다. 이 문서는 이전 Mingle Lounge `Cobblemon 1.7.3` 기준 참고용입니다. 현재 서버 운영/복구/재구축 판단은 [docs/server/README.md](/Users/smlee/mingle-lounge/docs/server/README.md), [docs/server/OPS_RUNBOOK.md](/Users/smlee/mingle-lounge/docs/server/OPS_RUNBOOK.md), [docs/server/MODS_AND_CLIENT.md](/Users/smlee/mingle-lounge/docs/server/MODS_AND_CLIENT.md)를 우선합니다.
 
 이 문서는 새 `mingle-lounge` Cobblemon 서버를 처음부터 구축할 때 사용하는 작업 가이드입니다. 목표는 에이전트가 이 문서만 보고 새 Fabric 서버를 현재 안정화 기준과 같은 상태로 만들 수 있게 하는 것입니다.
 
-구축 완료 후 결과 비교는 [현재 세팅](/Users/smlee/mingle-lounge/cobblemon-current-settings.md)을 기준으로 합니다.
+구축 완료 후 결과 비교는 [기준 세팅](/Users/smlee/mingle-lounge/cobblemon-current-settings.md)을 기준으로 합니다.
 
 ## 1. 기본 원칙
 
@@ -90,6 +92,8 @@
 /Users/smlee/mingle-lounge/datapacks/cobblemon-indigo.zip
 /Users/smlee/mingle-lounge/datapacks/mingle-time-settings
 /Users/smlee/mingle-lounge/datapacks/mingle-time-settings.zip
+/Users/smlee/mingle-lounge/datapacks/mingle-gym-party-overrides
+/Users/smlee/mingle-lounge/datapacks/mingle-gym-party-overrides.zip
 ```
 
 서버 파일 위치:
@@ -100,6 +104,7 @@ world/datapacks/mingle-login-reward.zip
 world/datapacks/mingle-dex-rewards.zip
 world/datapacks/cobblemon-indigo.zip
 world/datapacks/mingle-time-settings.zip
+world/datapacks/mingle-gym-party-overrides.zip
 world/datapacks/MythsAndLegends-Datapack-v1.0.5.zip
 ```
 
@@ -120,14 +125,14 @@ world/datapacks/mingle-time-settings.zip
 
 `cobblemon-indigo.zip`은 Cobblemon NPC 데이터팩입니다. 관동 8관장, 사천왕, 챔피언 프리셋과 배지 지급 흐름을 추가합니다. 배지 아이템 지급을 위해 서버와 클라이언트 모두 `cobblemonpokemonbadges-fabric-0.1.1.jar`가 필요합니다. 관장 NPC는 자동 배치되지 않으므로 OP 권한으로 `/spawnnpc cobblemon:indigo_leader_brock` 같은 명령을 사용해 직접 배치합니다.
 
-운영 서버에 Indigo를 반영할 때 업로드할 파일과 기준 해시는 아래와 같습니다.
+File Browser 기반 서버에 Indigo를 반영할 때 업로드했던 파일과 기준 해시는 아래와 같습니다.
 
 | 서버 경로 | 로컬 파일 | SHA-256 |
 | --- | --- | --- |
 | `mods/cobblemonpokemonbadges-fabric-0.1.1.jar` | `work/indigo-20260528/server-upload/mods/cobblemonpokemonbadges-fabric-0.1.1.jar` | `a5011078a804bdff0d299fe2e0e33010c92c976408524d9b0df041030d73f941` |
 | `world/datapacks/cobblemon-indigo.zip` | `work/indigo-20260528/server-upload/world/datapacks/cobblemon-indigo.zip` | `8aff092a0009b0a3de79c0652f5a26a067ad8b7941e721b8a5257b1bc1643303` |
 
-2026-05-28 운영 서버에는 위 두 파일을 File Browser로 업로드했고, 서버에서 다시 읽은 파일의 SHA-256이 기준 해시와 일치함을 확인했습니다. 모드 jar 추가는 서버 재시작 전에는 반영되지 않으므로, 업로드 검증 뒤 사용자가 서버 관리 버튼으로 재시작해야 합니다.
+2026-05-28 File Browser 기반 서버에는 위 두 파일을 업로드했고, 서버에서 다시 읽은 파일의 SHA-256이 기준 해시와 일치함을 확인했습니다. 모드 jar 추가는 서버 재시작 전에는 반영되지 않으므로, 업로드 검증 뒤 사용자가 서버 관리 버튼으로 재시작해야 합니다.
 
 `mingle-time-settings.zip`은 데이터팩 로드 시 아래 gamerule을 적용합니다. 이는 Cobblemon 기본 흐름에 맞춰 밤/날씨 순환을 켜는 설정이며, `doMobSpawning`은 바닐라 적대 몹 억제 목적과 별개라 건드리지 않습니다.
 
